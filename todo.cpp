@@ -51,18 +51,21 @@ void showHelp() {
   std::cout << "  delete" << std::endl;
   std::cout << "[options]" << std::endl;
   std::cout << "  -h  --help      shows this page" << std::endl;
+  std::cout << "  -p  --priority  set priority" << std::endl;
 }
 
 int addTask(DBLinker &db, int argc, char *argv[]) {
-  if (!(argc == 5)) {
+  if (argc < 3) {
     std::cout << "Error: Please specify a task to add." << std::endl;
     return 1;
   }
   std::string task = argv[2];
 
   std::string priority = "0";
-  if (strcmp(argv[3], "-p") || strcmp(argv[3], "--priority")) {
-    std::string priority = argv[4];
+  if (argc > 3) {
+    if (strcmp(argv[3], "-p") || strcmp(argv[3], "--priority")) {
+      std::string priority = argv[4];
+    }
   }
 
   std::string query =
