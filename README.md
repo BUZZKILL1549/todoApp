@@ -12,7 +12,7 @@ will present a nice little page with instructions on finer commands, but basical
 ~~~
 $ ./todo <command> [options]
 ~~~
-where <command> is one of 3 (add, list, delete)
+where command is one of 3 (add, list, delete)
 and options is one of 2 (-h, -p) where -p stands for priority.
 You can set priorities when you add a task:
 ~~~
@@ -30,4 +30,4 @@ To delete a task:
 ~~~
 $ ./todo delete <taskNum>
 ~~~
-where <taskNum> is obtained by using the list command.
+where taskNum is obtained by using the list command.
